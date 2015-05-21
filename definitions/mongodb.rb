@@ -94,6 +94,7 @@ define :mongodb_instance, :mongodb_type => "mongod" , :action => [:enable, :star
     variables(
       "daemon_path" => daemon,
       "name" => name,
+      "user" => node[:mongodb][:user],
       "config" => configfile,
       "configdb" => configserver,
       "bind_ip" => bind_ip,
